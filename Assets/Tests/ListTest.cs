@@ -1,4 +1,5 @@
 ﻿
+using System;
 using SharpUnit;
 using SinglyLinkedListExample;
 
@@ -26,7 +27,7 @@ namespace ListUnitTest
 		/** Setup test resources, called before each test. */
 	    public override void SetUp() 
 		{
-			test1array = new int[] {0,1,2,3,4,5,6,7,8,9};
+			test1array = new int[] {0,1,2,3,4,5,6,7,8,'a'};
 			test1list = new SinglyLinkedList<int>(test1array);
 
 			test2array = new int[] {-24, 42, 8, 0, 1, -5};
@@ -40,6 +41,7 @@ namespace ListUnitTest
 
 			test5array = new int[] {1,2,3};
 			test5list = new SinglyLinkedList<int>(test5array);
+
 		}
 	
 	    /** Dispose of test resources, called after each test */
@@ -69,10 +71,13 @@ namespace ListUnitTest
 			Assert.Equal( 1, test3list.GetNthLast(5).data );
 			Assert.Null( test4list.GetNthLast(5) );
 			Assert.Null( test5list.GetNthLast(5) );
-
+			/* 
+			 * fully test one of the arrays
+			 */
 			int l = test1array.Length;
 			for (int i=0; i<l; i++)
 			{
+				Assert.Equal("System.Int32", test1list.GetNthLast(l-i).data.GetType() ); 
 				Assert.Equal( i, test1list.GetNthLast(l-i).data );
 			}
 		}
@@ -83,15 +88,16 @@ namespace ListUnitTest
 		{
 			/* 
 			 * there is no fifth-last element here, 
-			 * check that it won't cause a runtime error
+			 * this should return null
+			 * also check that it won't cause a runtime error
 			 */
-			Assert.Equal( default(SingleLinkNode<int>), test2list.GetNthLast(10) );
+			Assert.Null( test2list.GetNthLast(10) );
 			
 			/* 
-			 * even though my exercise is only to find the fifth-last element, 
+			 * even though the exercise is only to find the fifth-last element, 
 			 * test negative integers passed to the function don't cause runtime error
 			 */
-			Assert.Equal( default(SingleLinkNode<int>), test2list.GetNthLast(-100) );
+			Assert.Null( test2list.GetNthLast(-100) );
 
 		}
 
