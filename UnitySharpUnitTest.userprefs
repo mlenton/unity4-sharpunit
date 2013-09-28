@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SharpUnit/ListTest.cs">
+    <Files>
+      <File FileName="Assets/SharpUnit/Unity3D_TestRunner.cs" Line="12" Column="11" />
+      <File FileName="Assets/SharpUnit/Unity3D_TestReporter.cs" Line="37" Column="14" />
+      <File FileName="Assets/SharpUnit/TestReporter.cs" Line="1" Column="1" />
+      <File FileName="Assets/SharpUnit/TestSuite.cs" Line="1" Column="1" />
+      <File FileName="Assets/SharpUnit/TestCase.cs" Line="1" Column="1" />
+      <File FileName="Assets/SharpUnit/Assert.cs" Line="1" Column="1" />
+      <File FileName="Assets/SharpUnit/ListTest.cs" Line="9" Column="26" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
