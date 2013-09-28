@@ -110,7 +110,7 @@ namespace ListUnitTest
 	    [UnitTest]
 	    public void TestList1EdgeCases() 
 		{
-			Assert.Equal( 1, test1list.GetNthLast(10).data );
+			Assert.Equal( 0, test1list.GetNthLast(10).data );
 			Assert.Equal( 9, test1list.GetNthLast(1).data );
 			Assert.Null( test1list.GetNthLast(11) );
 			Assert.Null( test1list.GetNthLast(0) );
