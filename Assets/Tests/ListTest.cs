@@ -1,4 +1,10 @@
-﻿
+﻿/*
+ * ListTest.cs
+ * Author: 	Matthew Lenton
+ * Email: 	matthew.lenton@gmail.com
+ * Date: 	September 2013
+ */
+
 using System;
 using SharpUnit;
 using SinglyLinkedListExample;
@@ -19,18 +25,7 @@ namespace ListUnitTest
 		{
 			
 			/** an array of positive integers */
-//			test1list = new SinglyLinkedList<int>(new int[] {0,1,2,3,4,5,6,7,8,9});
-			test1list = new SinglyLinkedList<int>();
-			test1list.Append(1);
-			test1list.Append(1);
-			test1list.Append(2);
-			test1list.Append(3);
-			test1list.Append(4);
-			test1list.Append(5);
-			test1list.Append(6);
-			test1list.Append(7);
-			test1list.Append(8);
-			test1list.Append(9);
+			test1list = new SinglyLinkedList<int>(new int[] {0,1,2,3,4,5,6,7,8,9});
 
 			/** an array containing negative integers */
 			test2list = new SinglyLinkedList<int>(new int[] {-24, 42, 8, 0, 1, -5});

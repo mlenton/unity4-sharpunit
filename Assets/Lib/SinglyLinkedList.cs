@@ -1,4 +1,11 @@
-﻿using System;
+﻿/*
+ * SinglyLinkedList.cs
+ * Author: 	Matthew Lenton
+ * Email: 	matthew.lenton@gmail.com
+ * Date: 	September 2013
+ */
+
+using System;
 
 namespace SinglyLinkedListExample { 
 	
@@ -72,7 +79,7 @@ namespace SinglyLinkedListExample {
 		 * Parameters: 			n
 		 * Returns: 			nth last item in the list, where last item is n = 1
 		 * Time complexity: 	O(n)
-		 * Description: 		advances a scout n items in the list, then advances a finder along with scout until scout reaches the end of the list.
+		 * Description: 		advances a scout (n-1) items into the list, then advances a finder along with scout until scout reaches the end of the list.
 		 */
 		public SingleLinkNode<T> GetNthLast(int n) 
 		{
@@ -88,7 +95,8 @@ namespace SinglyLinkedListExample {
 			SingleLinkNode<T> finder = head;
 			SingleLinkNode<T> scout = head;
 			
-			for (int i=1; i<n; i++)
+			/** advance scout n items */
+			for (int i=0; i<n-1; i++)
 			{ 
 			
 				if (scout != null) 
@@ -114,8 +122,8 @@ namespace SinglyLinkedListExample {
 				Console.WriteLine(e);
 				return default(SingleLinkNode<T>);
 			}
-			
-			while ( (scout.link != null) )  
+			/** advance scout and finder until scout reaches end of the list */
+			while ( scout.link != null )  
 			{ 
 				scout = scout.link;
 				finder = finder.link;
