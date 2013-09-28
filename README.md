@@ -3,7 +3,7 @@ unity4-unit-testing
 
 ## Demonstration of unit testing in Unity 4
 
-### Files for review: 
+### Files for review
 
 The class for the singly linked list is [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Lib/SinglyLinkedList.cs "SinglyLinkedList").
 
