@@ -113,14 +113,16 @@ namespace ListUnitTest
 			Assert.Null( testList1.GetNthLast(0) );
 			Assert.Null( testList1.GetNthLast(-1) );
 		}
+	    [UnitTest]
 	    public void TestList2EdgeCases() 
 		{
-			Assert.Equal( 24, testList2.GetNthLast(6).data );
+			Assert.Equal( -24, testList2.GetNthLast(6).data );
 			Assert.Equal( -5, testList2.GetNthLast(1).data );
 			Assert.Null( testList2.GetNthLast(7) );
 			Assert.Null( testList2.GetNthLast(0) );
 			Assert.Null( testList2.GetNthLast(-1) );
 		}
+	    [UnitTest]
 	    public void TestList3EdgeCases() 
 		{
 			Assert.Equal( -1, testList3.GetNthLast(5).data );
@@ -128,25 +130,27 @@ namespace ListUnitTest
 			Assert.Null( testList3.GetNthLast(0) );
 			Assert.Null( testList3.GetNthLast(-1) );
 		}
+	    [UnitTest]
 	    public void TestList4EdgeCases() 
 		{
 			Assert.Null( testList4.GetNthLast(1) );
 			Assert.Null( testList4.GetNthLast(0) );
 			Assert.Null( testList4.GetNthLast(-1) );
 		}
+	    [UnitTest]
 	    public void TestList5EdgeCases() 
 		{
-			Assert.Equal( 0, testList5.GetNthLast(3).data );
+			Assert.Equal( 1, testList5.GetNthLast(3).data );
 			Assert.Equal( 3, testList5.GetNthLast(1).data );
 			Assert.Null( testList5.GetNthLast(4) );
 			Assert.Null( testList5.GetNthLast(0) );
 			Assert.Null( testList5.GetNthLast(-1) );
 		}
-		
-		
+			
 		/* 
 		 * test negative integers passed to the function don't cause runtime error
 		 */
+	    [UnitTest]
 	    public void TestNegativeNth() 
 		{
 			Assert.Null( testList2.GetNthLast(-100) );
