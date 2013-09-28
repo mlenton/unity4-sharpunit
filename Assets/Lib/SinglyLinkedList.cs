@@ -18,9 +18,14 @@ namespace SinglyLinkedListExample {
 	{ 
 		SingleLinkNode<T> head;
 		SingleLinkNode<T> current;
-	
-		public SinglyLinkedList(T[] a) 
+		public SinglyLinkedList() 
 		{ 
+			head = null;
+			current = null;
+		}	
+		public SinglyLinkedList(T[] a) 
+			: base()
+		{ 	
 			for (int i=0; i<a.Length; i++)
 			{ 
 				Append(a[i]);
@@ -45,48 +50,84 @@ namespace SinglyLinkedListExample {
 				current.link = newNode;
 			}
 		}
+
+		public int Count() 
+		{
+			int length = 0;
+			if ( head != null ) 
+			{ 
+				current = head;
+				length = 1;
+				while (current.link != null) 
+				{ 
+					current = current.link;
+					length++;
+				}
+			}
+			return length;
+		}
 	
+		/* 
+		 * GetNthItem function
+		 * Parameters: 			n
+		 * Returns: 			nth last item in the list, where last item is n = 1
+		 * Time complexity: 	O(n)
+		 * Description: 		advances a scout n items in the list, then advances a finder along with scout until scout reaches the end of the list.
+		 */
 		public SingleLinkNode<T> GetNthLast(int n) 
 		{
-			/*
-			 * the 0th last item doesn't strictly exist
-			 * since the 1st last item is the last
-			 * ...couldn't bring myself to preempt the meaning of 0 here and set n to 1
-			 */
 			if ( n <= 0 ) 
 			{ 
+				/*
+				 * the 0th last item (and anything previous) doesn't strictly exist
+				 * since the '1st last' item is the last ...couldn't bring myself to preempt the meaning of 0 here and set n to 1
+				 */
 				return default(SingleLinkNode<T>);
 			}
 			
-			SingleLinkNode<T> returned = head;
-			current = head;
+			SingleLinkNode<T> finder = head;
+			SingleLinkNode<T> scout = head;
 			
 			for (int i=1; i<n; i++)
 			{ 
 			
-				if (current != null) 
+				if (scout != null) 
 				{ 
-					current = current.link;
+					scout = scout.link;
 				} 
 				else 
 				{ 
 					return default(SingleLinkNode<T>);
 				}
 			}
-			
-			while ( (current.link != null) )  
+			/** workaround NullPointerException when scout.Equals is called by the operator */
+			try 
 			{ 
-				current = current.link;
-				returned = returned.link;
+				if ( scout == null ) 
+				{ 
+					return default(SingleLinkNode<T>);
+				}
+
+			} 
+			catch (Exception e) 
+			{
+				Console.WriteLine(e);
+				return default(SingleLinkNode<T>);
+			}
+			
+			while ( (scout.link != null) )  
+			{ 
+				scout = scout.link;
+				finder = finder.link;
 			} 
 			
-			if (returned == null) 
+			if (finder == null) 
 			{				
 				return default(SingleLinkNode<T>);
 			} 
 			else
 			{ 
-				return returned;
+				return finder;
 			}
 		}
 	}

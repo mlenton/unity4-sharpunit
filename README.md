@@ -1,12 +1,10 @@
 unity4-unit-testing
 ===================
 
-Sample project demonstrating unit testing in Unity 4
+## Sample project demonstrating unit testing in Unity 4
 
-Coding exercise for review
+### Files of note: 
 
-The brief: 
+SinglyLinkedList is [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Lib/SinglyLinkedList.cs "GetNthLast()").
 
-> Write a function that would: return the 5th element from the end in a singly linked list of integers, in one pass, and then provide a set of test cases against that function. (Using C#)
-
-It's also integrated into a unit Unity3D testing framework (for the win ;) 
+Tests against GetNthLast method are [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Tests/ListTest.cs "unit tests").
