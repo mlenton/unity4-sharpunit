@@ -54,7 +54,7 @@
      <Compile Include="Assets\SharpUnit\UnitTest.cs" />
      <Compile Include="Assets\SharpUnit\Unity3D_TestReporter.cs" />
      <Compile Include="Assets\SharpUnit\Unity3D_TestRunner.cs" />
-     <Compile Include="Assets\Tests\ListTest.cs" />
+     <Compile Include="Assets\Tests\Test_List_GetNthLast.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

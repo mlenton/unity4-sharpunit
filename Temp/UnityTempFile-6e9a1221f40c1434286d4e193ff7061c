@@ -43,6 +43,6 @@
 'Assets/SharpUnit/UnitTest.cs'
 'Assets/SharpUnit/Unity3D_TestReporter.cs'
 'Assets/SharpUnit/Unity3D_TestRunner.cs'
-'Assets/Tests/ListTest.cs'
+'Assets/Tests/Test_List_GetNthLast.cs'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Runtime.Serialization.dll'
 -r:'/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/System.Xml.Linq.dll'

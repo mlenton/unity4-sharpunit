@@ -1,8 +1,9 @@
 ﻿/*
  * SinglyLinkedList.cs
- * Author: 	Matthew Lenton
- * Email: 	matthew.lenton@gmail.com
- * Date: 	September 2013
+ * Author: 		Matthew Lenton
+ * Email: 		matthew.lenton@gmail.com
+ * Date: 		September 2013
+ * Description: Implements only the basics required to test a GetNthLast method.
  */
 
 using System;
@@ -75,11 +76,12 @@ namespace SinglyLinkedListExample {
 		}
 	
 		/* 
-		 * GetNthItem function
+		 * GetNthLast function
 		 * Parameters: 			n
-		 * Returns: 			nth last item in the list, where last item is n = 1
+		 * Returns: 			nth last item in the list, 
+		 						NOTE: last item is n = 1
 		 * Time complexity: 	O(n)
-		 * Description: 		advances a scout (n-1) items into the list, then advances a finder along with scout until scout reaches the end of the list.
+		 * Description: 		advances a scout (n-1) items into the list, then advances a finder along with scout until scout reaches the end of the list.		 						
 		 */
 		public SingleLinkNode<T> GetNthLast(int n) 
 		{

@@ -9,7 +9,7 @@
 using UnityEngine;
 using System.Collections;
 using SharpUnit;
-using ListUnitTest;
+using Test_List_GetNthLast;
 
 public class Unity3D_TestRunner : MonoBehaviour 
 {
@@ -22,7 +22,7 @@ public class Unity3D_TestRunner : MonoBehaviour
         TestSuite suite = new TestSuite();
 
         // Example: Add tests to suite
-        suite.AddAll(new ListTest());
+        suite.AddAll(new List_GetNthLast());
 
         // Run the tests
         TestResult res = suite.Run(null);

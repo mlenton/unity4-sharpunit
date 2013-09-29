@@ -5,7 +5,7 @@ unity4-unit-testing
 
 ### Files for review
 
-The class for the singly linked list is [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Lib/SinglyLinkedList.cs "SinglyLinkedList").
+The class for the singly-linked list is [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Lib/SinglyLinkedList.cs "SinglyLinkedList").
 
 Tests against GetNthLast method are [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Tests/ListTest.cs "unit tests").
 
