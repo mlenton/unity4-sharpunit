@@ -1,14 +1,14 @@
 ## Demonstration of unit testing in Unity 4
 
-Basic implementation of a [singly-linked list](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Lib/SinglyLinkedList.cs "SinglyLinkedList"), providing a method to get the 5th element from the end.  
+Basic implementation of a [singly-linked list](Assets/Lib/SinglyLinkedList.cs "SinglyLinkedList"), providing a method to get the 5th element from the end.  
 
-Uses [SharpUnit](https://github.com/mgants4/SharpUnit "SharpUnit") by Mark Gants to run a [set of unit tests against the GetNthLast method](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Tests/ListTest.cs "unit tests").
+Uses [SharpUnit](https://github.com/mgants4/SharpUnit "SharpUnit") by Mark Gants to run a [set of unit tests against the GetNthLast method](Assets/Tests/ListTest.cs "unit tests").
 
 ### Files for review
 
-The class for the singly-linked list can be found [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Lib/SinglyLinkedList.cs "SinglyLinkedList").
+The class for the singly-linked list can be found [here](Assets/Lib/SinglyLinkedList.cs "SinglyLinkedList").
 
-Tests against GetNthLast method can be found [here](https://github.com/mlenton/unity4-sharpunit/blob/master/Assets/Tests/ListTest.cs "unit tests").
+Tests against GetNthLast method can be found [here](Assets/Tests/ListTest.cs "unit tests").
 
 ### How to test
 
